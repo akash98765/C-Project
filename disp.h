@@ -1,7 +1,7 @@
 #include "work.h"
 #ifndef DISP_H
 #define DISP_H
-void disp()
+void disp() //display functions
 {struct employee *a=(struct employee*)malloc(sizeof(struct employee));
 a=head;
 while(a!=NULL)
