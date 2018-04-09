@@ -23,7 +23,7 @@ void del()
     	  	b->next=a->next;
 		  }
     	 /*b=head;
-    	 while(b->next->id!=w)  //not able to put this while to findprev, throwing error
+    	 while(b->next->id!=w)  //not able to put this while to findprev, throwing errors
     	 b=b->next;
     	 b->next=a->next;
     	 */
