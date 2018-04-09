@@ -5,7 +5,7 @@
 #include "disp.h"
 #include "update.h"
 #include "del.h"
-	
+//Main Program	
 int c=0;
 
 struct employee* head;
