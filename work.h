@@ -1,5 +1,6 @@
 #ifndef WORK_H
 #define WORK_H
+//declaration header
 struct employee
 {
 
