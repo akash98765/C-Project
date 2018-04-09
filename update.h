@@ -1,6 +1,6 @@
 #include "work.h"
 #ifndef UPDATE_H
-#define UPDATE_H
+#define UPDATE_H //UPDATE AND SEARCH FUNCTIONS
 void update()
 {int w,newindex;
  int found=0;
