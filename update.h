@@ -1,14 +1,21 @@
 #include "work.h"
+#include <string.h>
 #ifndef UPDATE_H
 #define UPDATE_H //UPDATE AND SEARCH FUNCTIONS
 void update()
 {int w,newindex;
+ float newsalary;
+ char newempname[30];
  int found=0;
  struct employee *a=(struct employee*)malloc(sizeof(struct employee));
  printf("\nEnter the ID number:");
  scanf("%d",&w);
  printf("\nEnter the new index:");
  scanf("%d",&newindex);
+  printf("\nEnter the new Employee Salary:");
+ scanf("%f",&newsalary);
+  printf("\nEnter the new Employee name:");
+ scanf("%s",&newempname);
  int first=1,last=c,mid; 
  while(first<=last)
  {a=head;
@@ -19,6 +26,8 @@ void update()
     	if(a->id==w)
     	{printf("\nElement changed %d",a->index);
     	 a->id=newindex;
+	 a->salary=newsalary;
+	 strcpy(a->empname,newempname);
     	 found=1;
     	 break;
 		}
