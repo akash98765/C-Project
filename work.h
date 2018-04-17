@@ -38,8 +38,8 @@ void create()
 else
 {tmp=head;
  a->id=ld;
- head->salary=salary;
- strcpy(head->empname,empname); 
+ a->salary=salary;
+ strcpy(a->empname,empname); 
  a->index=c;
  a->next=NULL;
  while(tmp->next!=NULL)
