@@ -43,7 +43,6 @@ void update()
  if(found==1)
  break;	
 }	
-sort();
 }
 void search()
 {int w;
