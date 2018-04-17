@@ -13,7 +13,7 @@ struct employee
 };
 extern int c;
 extern struct employee * head;
-void sort();
+void sort(int a1);
 void create()
 { ++c;
   struct employee *a=(struct employee*)malloc(sizeof(struct employee));
@@ -59,7 +59,8 @@ b=head;
  printf("Enter the sort field:\n1.Name\n2.Id\n Your choice:");
  scanf("%d",&choice);
  switch(choice)
-	 {case 1:while(b!=NULL)
+	 {case 1:b=head;
+		 while(b!=NULL)
                  {   a=b->next;
 	(a!=NULL)
 		  
@@ -76,7 +77,8 @@ b=head;
         b=b->next;
 }
 	          break;
-	  case 2:while(b!=NULL)
+	  case 2:b=head;
+		  while(b!=NULL)
          {   a=b->next;
 	while(a!=NULL)
 	{
@@ -98,6 +100,24 @@ break;
  }
  
 
+ else
+	 {b=head;
+		 while(b!=NULL)
+         {   a=b->next;
+	while(a!=NULL)
+	{
+		if((b->id)>(a->id))
+		{c=b->id;
+		 b->id=a->id;
+		 a->id=c;
+		}
+		a=a->next;
+	}
+
+        b->index=up++;
+        b=b->next;
+}
+	 }
 	
 }
 #endif
