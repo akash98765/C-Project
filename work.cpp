@@ -1,13 +1,23 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
+#include<conio.h>
 #include "work.h"
 #include "disp.h"
 #include "update.h"
 #include "del.h"
 //Main Program	
 int c=0;
+#define WINDOWS 1
 
+void console_clear_screen() {
+  #ifdef WINDOWS
+  system("cls");
+  #endif
+  #ifdef LINUX
+  system("clear");
+  #endif
+}
 struct employee* head;
 struct employee findprev(int);
 int main()
@@ -20,17 +30,23 @@ int main()
 		switch(choice)
 		{
 			case 1:create();
+				getch();
 			        break;
 			case 2:update();
+				getch();
 			        break;
 			case 3:search();
+				getch();
 			        break;
 			case 4:del();
+				getch();
 			        break;
-		    case 6://get(ch);
-		        exit(0);
-		    case 5:disp();
-		           break;
+			case 5:disp();
+			       getch();
+		               break;
+			case 6:
+		                exit(0);
+		    
 		}
 	}
 	while(choice<=6);
@@ -41,6 +57,3 @@ int main()
 
 
 
-struct employee  findprev(int a)
-{ 
-}
