@@ -50,14 +50,32 @@ else
 printf("\nDetails created");
 sort();
 }
-void sort()
+void sort(int a1)
 {int c,up=1,choice; 
 struct employee *a=(struct employee*)malloc(sizeof(struct employee));
 struct employee *b=(struct employee*)malloc(sizeof(struct employee));
 b=head;
+ if(a1!=1){
  printf("Enter the sort field:\n1.Name\n2.Id\n Your choice:");
+ scanf("%d",&choice);
  switch(choice)
-	 {case 1:break;
+	 {case 1:while(b!=NULL)
+                 {   a=b->next;
+	(a!=NULL)
+		  
+	{
+		if(strcmp(b->empname,a->empname)>0)
+		{c=b->id;
+		 b->id=a->id;
+		 a->id=c;
+		}
+		a=a->next;
+	}
+
+        b->index=up++;
+        b=b->next;
+}
+	          break;
 	  case 2:while(b!=NULL)
          {   a=b->next;
 	while(a!=NULL)
@@ -75,24 +93,11 @@ b=head;
 }
 break;
 	  
- 
+ }
  
  }
- while(b!=NULL)
-{   a=b->next;
-	while(a!=NULL)
-	{
-		if((b->id)>(a->id))
-		{c=b->id;
-		 b->id=a->id;
-		 a->id=c;
-		}
-		a=a->next;
-	}
+ 
 
-        b->index=up++;
-        b=b->next;
-}
 	
 }
 #endif
