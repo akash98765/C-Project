@@ -6,6 +6,8 @@ struct employee
 
 	int id;
 	int index;
+	float salary;
+	char empname[30];
   struct employee *next;
 };
 extern int c;
@@ -18,6 +20,10 @@ void create()
   char n[30];int ld;
   printf("\nID:");
   scanf("%d",&ld);
+  printf("\nEmployee Salary:");
+  scanf("%f",&salary);
+  printf("\nEmployee name:");
+  scanf("%s",&empname);
  if(head==NULL)
  {
  
