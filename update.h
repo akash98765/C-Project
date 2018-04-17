@@ -15,7 +15,7 @@ void update()
   printf("\nEnter the new Employee Salary:");
  scanf("%f",&newsalary);
   printf("\nEnter the new Employee name:");
- scanf("%s",&newempname);
+ scanf("%s",newempname);
  int first=1,last=c,mid; 
  while(first<=last)
  {a=head;
