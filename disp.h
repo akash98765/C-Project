@@ -6,6 +6,8 @@ void disp() //display functions
 a=head;
 while(a!=NULL)
 {printf("\n%d",a->id);
+ printf("\n%f",a->salary);
+ printf("\n%s\n",a->empname);
 	a=a->next;
 	}	
 }
