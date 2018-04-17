@@ -45,5 +45,6 @@ void del()
  if(found==1)
  break;	
 }
+ sort();
 }
 #endif
