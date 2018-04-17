@@ -51,11 +51,34 @@ printf("\nDetails created");
 sort();
 }
 void sort()
-{int c,up=1; 
+{int c,up=1,choice; 
 struct employee *a=(struct employee*)malloc(sizeof(struct employee));
 struct employee *b=(struct employee*)malloc(sizeof(struct employee));
 b=head;
-while(b!=NULL)
+ printf("Enter the sort field:\n1.Name\n2.Id\n Your choice:");
+ switch(choice)
+	 {case 1:break;
+	  case 2:while(b!=NULL)
+         {   a=b->next;
+	while(a!=NULL)
+	{
+		if((b->id)>(a->id))
+		{c=b->id;
+		 b->id=a->id;
+		 a->id=c;
+		}
+		a=a->next;
+	}
+
+        b->index=up++;
+        b=b->next;
+}
+break;
+	  
+ 
+ 
+ }
+ while(b!=NULL)
 {   a=b->next;
 	while(a!=NULL)
 	{
