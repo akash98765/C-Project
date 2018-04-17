@@ -10,8 +10,6 @@ void update()
  struct employee *a=(struct employee*)malloc(sizeof(struct employee));
  printf("\nEnter the ID number:");
  scanf("%d",&w);
- printf("\nEnter the new index:");
- scanf("%d",&newindex);
   printf("\nEnter the new Employee Salary:");
  scanf("%f",&newsalary);
   printf("\nEnter the new Employee name:");
@@ -25,7 +23,6 @@ void update()
     {
     	if(a->id==w)
     	{printf("\nElement changed %d",a->index);
-    	 a->id=newindex;
 	 a->salary=newsalary;
 	 strcpy(a->empname,newempname);
     	 found=1;
