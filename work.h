@@ -1,5 +1,6 @@
 #ifndef WORK_H
 #define WORK_H
+#include<string.h>
 //declaration header
 struct employee
 {
@@ -17,7 +18,7 @@ void create()
 { ++c;
   struct employee *a=(struct employee*)malloc(sizeof(struct employee));
   struct employee *tmp=(struct employee*)malloc(sizeof(struct employee));
-  char n[30];int ld;
+  char empname[30];int ld;float salary;
   printf("\nID:");
   scanf("%d",&ld);
   printf("\nEmployee Salary:");
@@ -29,12 +30,16 @@ void create()
  
   head=(struct employee*)malloc(sizeof(struct employee));
   head->id=ld;
+  head->salary=salary;
+  strcpy(head->empname,empname); 
   head->index=c;
   head->next=NULL; 
 }
 else
 {tmp=head;
  a->id=ld;
+ head->salary=salary;
+ strcpy(head->empname,empname); 
  a->index=c;
  a->next=NULL;
  while(tmp->next!=NULL)
