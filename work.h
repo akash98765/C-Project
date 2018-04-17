@@ -24,7 +24,7 @@ void create()
   printf("\nEmployee Salary:");
   scanf("%f",&salary);
   printf("\nEmployee name:");
-  scanf("%s",&empname);
+  scanf("%s",empname);
  if(head==NULL)
  {
  
