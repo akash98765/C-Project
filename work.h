@@ -51,7 +51,7 @@ printf("\nDetails created");
 sort();
 }
 void sort()
-{int c; 
+{int c,up=1; 
 struct employee *a=(struct employee*)malloc(sizeof(struct employee));
 struct employee *b=(struct employee*)malloc(sizeof(struct employee));
 b=head;
@@ -67,6 +67,7 @@ while(b!=NULL)
 		a=a->next;
 	}
 	b=b->next;
+        b->index=up++;
 }
 	
 }
