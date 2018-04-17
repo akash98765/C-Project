@@ -66,8 +66,9 @@ while(b!=NULL)
 		}
 		a=a->next;
 	}
-	b=b->next;
+
         b->index=up++;
+        b=b->next;
 }
 	
 }
